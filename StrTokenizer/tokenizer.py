@@ -19,3 +19,6 @@ class StrTokenizer:
                     self.tokens.append(i)
             else:
                 w=w+i
+    
+    def countTokens(self):
+        return len(self.tokens)
