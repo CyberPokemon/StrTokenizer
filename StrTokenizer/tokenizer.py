@@ -22,3 +22,6 @@ class StrTokenizer:
     
     def countTokens(self):
         return len(self.tokens)
+    
+    def countTokensLeft(self):
+        return len(self.tokens)-self.index
