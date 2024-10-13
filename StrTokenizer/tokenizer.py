@@ -5,10 +5,12 @@ class StrTokenizer:
         self.returndelims=return_delims
         self.tokens=[]
         self.index=0
+
+        self.create_token()#string is being divided into tokens
     
     def create_token(self):
         w=""
-        
+
         for i in self.inputstr:
             if i in self.delim:
                 if w!="":
