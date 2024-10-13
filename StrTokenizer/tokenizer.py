@@ -25,3 +25,9 @@ class StrTokenizer:
     
     def countTokensLeft(self):
         return len(self.tokens)-self.index
+    
+    def hasMoreTokens(self):
+        if len(self.tokens)==self.index:
+            return False
+        else:
+            return True
