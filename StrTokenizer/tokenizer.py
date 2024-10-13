@@ -6,3 +6,14 @@ class StrTokenizer:
         self.tokens=[]
         self.index=0
     
+    def create_token(self):
+        w=""
+        
+        for i in self.inputstr:
+            if i in self.delim:
+                if w!="":
+                    self.tokens.append(w)
+                if self.returndelims:
+                    self.tokens.append(i)
+            else:
+                w=w+i
