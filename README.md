@@ -20,7 +20,14 @@ If you want to use it locally without installing, simply download or copy the `t
 
 ### Import the Module
 
-To use the `StrTokenizer`, import the class from your module:
+If the module is installed via pip, import the class from your module:
+
+```python
+from StrTokenizer import StrTokenizer
+```
+
+
+If the module (tokenizer.py) is downloaded from GitHub, import it like this:
 
 ```python
 from tokenizer import StrTokenizer
@@ -152,6 +159,14 @@ Token: grape
   
 - `rewind(self, steps: int = None) -> None`:
   - Resets the tokenizer's index either completely or by a given number of steps.
+ 
+You can install the `StrTokenizer` package from PyPI:
+
+[Install StrTokenizer from PyPI](https://pypi.org/project/StrTokenizer/1.0.0/)
+
+## Source Code:
+
+[Github Link](https://github.com/CyberPokemon/StrTokenizer)
 
 ## License
 
