@@ -1,3 +1,5 @@
 build/
 dist/
 StrTokenizer.egg-info/
+main.py
+__pycache__
