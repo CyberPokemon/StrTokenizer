@@ -1,5 +1,3 @@
-# setup.py
-
 from setuptools import setup, find_packages
 
 with open("README.md", "r") as fh:
@@ -15,10 +13,15 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/CyberPokemon/StrTokenizer.git",
     packages=find_packages(),
+    install_requires=[],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
+        "Development Status :: 5 - Production/Stable",
+        "Intended Audience :: Developers",
+        "Topic :: Software Development :: Libraries :: Python Modules"
     ],
+    keywords="string tokenizer split parse",  # Add relevant keywords
     python_requires='>=3.6',
 )
