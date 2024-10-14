@@ -1,5 +1,5 @@
 class StrTokenizer:
-    def __init__(self,inputstring,delimeter=" ",return_delims=False):
+    def __init__(self,inputstring:str,delimeter: str=" ",return_delims: bool=False):
         self.inputstr=inputstring
         self.delim=delimeter
         self.returndelims=return_delims
@@ -9,7 +9,7 @@ class StrTokenizer:
 
         self.create_token()#string is being divided into tokens
     
-    def create_token(self):
+    def create_token(self) -> None:
         w=""
 
         for i in self.inputstr:
@@ -25,23 +25,23 @@ class StrTokenizer:
             self.tokens.append(w)
         self.nooftokens=len(self.tokens)
     
-    def countTokens(self):
+    def countTokens(self) -> int:
         return len(self.tokens)
     
-    def countTokensLeft(self):
+    def countTokensLeft(self) ->int:
         return len(self.tokens)-self.index
     
-    def hasMoreTokens(self):
+    def hasMoreTokens(self) -> bool:
         return self.index < len(self.tokens)
         
-    def nextToken(self):
+    def nextToken(self) ->str:
         if self.index==self.nooftokens:
             raise IndexError("No more tokens available.")
         else:
             self.index+=1
             return self.tokens[self.index-1]
         
-    def rewind(self, steps=None):
+    def rewind(self, steps=None) -> None:
         if steps is None:
             self.index = 0
         else:
