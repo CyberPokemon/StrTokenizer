@@ -18,8 +18,11 @@ class StrTokenizer:
                     self.tokens.append(w)
                 if self.returndelims:
                     self.tokens.append(i)
+                w=""
             else:
                 w=w+i
+        if w:
+            self.tokens.append(w)
         self.nooftokens=len(self.tokens)
     
     def countTokens(self):
@@ -29,10 +32,7 @@ class StrTokenizer:
         return len(self.tokens)-self.index
     
     def hasMoreTokens(self):
-        if len(self.tokens)==self.index:
-            return False
-        else:
-            return True
+        return self.index < len(self.tokens)
         
     def nextToken(self):
         if self.index==self.nooftokens:
