@@ -40,3 +40,12 @@ class StrTokenizer:
         else:
             self.index+=1
             return self.tokens[self.index-1]
+        
+    def rewind(self, steps=None):
+        if steps is None:
+            self.index = 0
+        else:
+            if self.index - steps < 0:
+                raise IndexError("INVALID INDEX")
+            else:
+                self.index -= steps
