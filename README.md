@@ -142,7 +142,7 @@ Token: grape
 - `__init__(self, inputstring: str, delimiter: str = " ", return_delims: bool = False)`:
   - Initializes the `StrTokenizer` with the given string, delimiter, and whether to return delimiters as tokens.
   
-- `create_token(self) -> None`:
+- `__create_token(self) -> None`:
   - Splits the input string into tokens based on the delimiter.
   
 - `countTokens(self) -> int`:
@@ -162,7 +162,7 @@ Token: grape
  
 You can install the `StrTokenizer` package from PyPI:
 
-[Install StrTokenizer from PyPI](https://pypi.org/project/StrTokenizer/1.0.0/)
+[Install StrTokenizer from PyPI](https://pypi.org/project/StrTokenizer/1.1.0/)
 
 ## Source Code:
 
