@@ -7,9 +7,9 @@ class StrTokenizer:
         self.index=0
         self.nooftokens=0
 
-        self.create_token()#string is being divided into tokens
+        self.__create_token()#string is being divided into tokens
     
-    def create_token(self) -> None:
+    def __create_token(self) -> None:
         w=""
 
         for i in self.inputstr:
