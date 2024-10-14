@@ -5,6 +5,7 @@ class StrTokenizer:
         self.returndelims=return_delims
         self.tokens=[]
         self.index=0
+        self.nooftokens=0
 
         self.create_token()#string is being divided into tokens
     
@@ -19,6 +20,7 @@ class StrTokenizer:
                     self.tokens.append(i)
             else:
                 w=w+i
+        self.nooftokens=len(self.tokens)
     
     def countTokens(self):
         return len(self.tokens)
@@ -31,3 +33,10 @@ class StrTokenizer:
             return False
         else:
             return True
+        
+    def nextToken(self):
+        if self.index==self.nooftokens:
+            raise IndexError("No more tokens available.")
+        else:
+            self.index+=1
+            return self.tokens[self.index-1]
