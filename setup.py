@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="StrTokenizer",
-    version="1.0.0", 
+    version="1.0.1", 
     author="Imon Mallik",
     author_email="imoncoding@gmail.com",
     description="A Python equivalent of Java's StringTokenizer with some added functionality",
